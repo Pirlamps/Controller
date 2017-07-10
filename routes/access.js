@@ -2,7 +2,7 @@ module.exports = function accessRoutes(app){
  const root = require('child_process')
  var child
     app.get('/netflix', (req,res) => {
-        child = root.exec('google-chrome netflix.com', () => {
+        child = root.exec('start chrome https://www.netflix.com/', () => {
             console.log(child.pid)
         })
     })
